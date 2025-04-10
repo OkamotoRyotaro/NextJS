@@ -1,4 +1,4 @@
-export default function Top() {
+export const Top = () => {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">Top Page</h1>
@@ -6,3 +6,5 @@ export default function Top() {
     </div>
   );
 }
+
+export default Top;

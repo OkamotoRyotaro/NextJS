@@ -1,4 +1,4 @@
-export default function About() {
+export const About = () => {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-bold">About Page</h1>
@@ -7,4 +7,7 @@ export default function About() {
       </p>
     </div>
   );
-}
+};
+
+// Next.jsが認識できるようにdefaultエクスポートを追加
+export default About;
