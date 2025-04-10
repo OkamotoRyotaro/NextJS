@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         {/* 固定ヘッダー */}
         <header className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-10">
           <nav className="flex justify-between items-center max-w-4xl mx-auto">
@@ -45,7 +45,10 @@ export default function RootLayout({
         </header>
 
         {/* ページごとのコンテンツ */}
-        <main className="mt-20">{children}</main>
+        <main className="flex-grow mt-20">{children}</main>
+        <footer className="bg-gray-800 text-white text-center p-4">
+          <p>&copy; 2025 My Website. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );
