@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Header from "./Header";
+import { Footer } from "./Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,28 +29,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         {/* 固定ヘッダー */}
-        <header className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-10">
-          <nav className="flex justify-between items-center max-w-4xl mx-auto">
-            <h1 className="text-xl font-bold">My Website</h1>
-            <div className="flex gap-4">
-              <Link href="/about" className="text-blue-500 hover:underline">
-                About
-              </Link>
-              <Link href="/top" className="text-blue-500 hover:underline">
-                Top
-              </Link>
-              <Link href="/contact" className="text-blue-500 hover:underline">
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </header>
-
+        <Header />
         {/* ページごとのコンテンツ */}
         <main className="flex-grow mt-20">{children}</main>
-        <footer className="bg-gray-800 text-white text-center p-4">
-          <p>&copy; 2025 My Website. All rights reserved.</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
