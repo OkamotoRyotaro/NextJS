@@ -1,3 +1,5 @@
+import ProfileTemplate from "./ProfileTemplate";
+
 export const About = () => {
   return (
     <div className="p-8">
@@ -5,6 +7,16 @@ export const About = () => {
       <p className="mt-4">
         This is the About page of the website.
       </p>
+      <ProfileTemplate
+        name={"menberA"}
+        image="file.svg"
+        basicInfo="AAAAAAAAAAAAA"
+        history={[
+          "aaaaaaaaaaaaaaaaaa",
+          "bbbbbbbbbbbbbbbbbb",
+          "vccccccccccccccccc"
+        ]}
+      />
     </div>
   );
 };
