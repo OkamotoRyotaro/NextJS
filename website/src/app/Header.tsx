@@ -14,8 +14,8 @@ export const Header = () => {
           <Link href="/event" className={style.link}>
             Event
           </Link>
-          <Link href="/about" className={style.link}>
-            About
+          <Link href="/aboutus" className={style.link}>
+            About Us
           </Link>
           <Link href="/contact" className={style.link}>
             Contact
