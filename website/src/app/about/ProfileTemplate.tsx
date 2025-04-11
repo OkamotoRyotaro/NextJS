@@ -16,7 +16,7 @@ export const ProfileTemplate = (props: ProfileTemplateProps) => {
         <Image src={props.image} width={100} height={100} alt="" style={{ width: "30vw", height: "auto" }} />
         <h2>{props.basicInfo}</h2>
       </div>
-      {props.history.map((line) => (<h1>{line}</h1>))}
+      {props.history.map((line, index) => (<h1 key={index}>{line}</h1>))}
     </div>
   )
 }
