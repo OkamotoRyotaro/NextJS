@@ -32,5 +32,6 @@
 .articleText {
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 16px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

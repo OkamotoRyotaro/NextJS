@@ -13,6 +13,8 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
   const { dirPath } = props
 
   const { title, contentLines } = useFetchArticleData(dirPath)
+
+  console.log(contentLines)
   return (
     <div className="p-8">
       <h1 className={style.articleTitle}>{title}</h1>
