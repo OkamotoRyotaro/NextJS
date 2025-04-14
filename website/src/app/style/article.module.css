@@ -11,9 +11,8 @@
 .articleChapterBox {
   margin-top: 2%;
   margin-bottom: 1%;
-  border-bottom-color: "#AAAAAA";
   border-bottom-width: 1;
-
+  border-color: "#AAAAAA";
 }
 
 .articleImage {
