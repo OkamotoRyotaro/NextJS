@@ -2,9 +2,14 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 
-export const SciencePageTemplate = () => {
+interface SciencePageTemplateProps {
+  dirPath: string;
+}
+
+export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
+  const { dirPath } = props
   // 記事データを読み込む
-  const filePath = path.join(process.cwd(), "public", "science", "article1.txt");
+  const filePath = path.join(process.cwd(), dirPath, "article.txt");
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
   // 記事データを解析
@@ -16,6 +21,13 @@ export const SciencePageTemplate = () => {
   const contentIndex = lines.findIndex((line) => line.startsWith("Content:"));
   const content = lines.slice(contentIndex + 1).join("\n").trim();
 
+  console.log(
+    lines,
+    title,
+    images,
+    contentIndex
+  )
+
   return (
     <div className="p-8">
       <h1 className="text-4xl font-bold mb-4">{title}</h1>
@@ -23,7 +35,7 @@ export const SciencePageTemplate = () => {
         {images.map((image, index) => (
           <div key={index} className="mb-4">
             <Image
-              src={`/science/${image}`}
+              src={`/science/article0/${image}`}
               alt={`Image ${index + 1}`}
               width={800}
               height={400}
