@@ -1,12 +1,16 @@
 import Link from "next/link";
 import React from "react";
 import style from "./style/header.module.css"
+import Contents from "./contents/Contents";
 
 export const Header = () => {
   return (
     <header className={style.header}>
       <nav className={style.nav}>
         <h1 className={style.title}>FROG</h1>
+        <div>
+          <Contents />
+        </div>
         <div className={style.links}>
           <Link href="/top" className={style.link}>
             Top
