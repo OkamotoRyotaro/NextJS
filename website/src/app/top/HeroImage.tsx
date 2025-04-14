@@ -1,5 +1,8 @@
 "use client";
-
+/*
+@splidejs/react-splide は型定義ファイルを手動で追加する必要がある
+https://zenn.dev/ymmt1089/articles/20220429_interface
+*/
 import React from "react"
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import "@splidejs/splide/css";
@@ -11,6 +14,10 @@ export const HeroImage = () => {
       options={{
         rewind: true,
         gap: '1rem',
+        perPage: 2,
+        type: "loop",
+        autoplay: true,
+        perMove: 1,
       }}
       aria-label="お気に入りの写真"
     >
