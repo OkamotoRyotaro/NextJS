@@ -1,10 +1,10 @@
 import fs from "fs";
-import Image from "next/image";
 import path from "path";
 import About from "../aboutus/page";
 import Event from "../event/page";
 import Contact from "../contact/page";
 import style from "@/app/style/top.module.css"
+import HeroImage from "./HeroImage";
 
 const Top = async () => {
   // text.txtのパスを取得
@@ -15,13 +15,7 @@ const Top = async () => {
     <div>
       <div className={style.heroArea}>
         {/* 背景画像 */}
-        <Image
-          src={"globe.svg"}
-          alt="background"
-          width={100}
-          height={100}
-          className={style.heroImage}
-        />
+        <HeroImage />
         {/* 画像上の文字 */}
         <div className={style.heroText}>
           <h2 className={style.h2}>
