@@ -37,14 +37,18 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
               break;
             case "Image":
               return (
-                <Image
-                  key={index}
-                  src={`${dirPath}/${content.content}`}
-                  alt={`Image ${index + 1}`}
-                  width={800}
-                  height={400}
-                  className={style.articleImage}
-                />
+                <div key={index} className={style.articleImageBox}>
+                  {content.content.split(" ").map((path, jindex) => (
+                    <Image
+                      key={jindex}
+                      src={`${dirPath}/${path}`}
+                      alt={`Image ${jindex + 1}`}
+                      width={800}
+                      height={400}
+                      className={style.articleImage}
+                    />
+                  ))}
+                </div>
               )
             case "Chapter":
               return (

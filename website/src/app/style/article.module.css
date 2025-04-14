@@ -5,9 +5,15 @@
 }
 
 .articleChapter {
-  margin-top: 5%;
   font-size: 30;
+}
+
+.articleChapterBox {
+  margin-top: 2%;
   margin-bottom: 1%;
+  border-bottom-color: "#AAAAAA";
+  border-bottom-width: 1;
+
 }
 
 .articleImage {
@@ -15,6 +21,13 @@
   margin-bottom: 16px;
   width: 40vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.articleImageBox {
+  text-align: center;
+  display: flex;
+  gap: 1%;
+  max-width: 100vh;
 }
 
 .articleText {

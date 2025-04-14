@@ -1,7 +1,7 @@
 Title: Article Title
 
 Chapter: Capter0
-Image: jellyfish1.jpg
+Image: jellyfish1.jpg jellyfish2.jpg
 Text: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 Chapter: Capter1

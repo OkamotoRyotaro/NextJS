@@ -8,7 +8,9 @@ interface ChapterProps {
 
 export const Chapter = (props: ChapterProps) => {
   return (
-    <p className={style.articleChapter}>{props.chapterName}</p>
+    <div className={style.articleChapterBox}>
+      <p className={style.articleChapter}>{props.chapterName}</p>
+    </div>
   )
 }
 
