@@ -1,5 +1,6 @@
 Title: The Wonders of Space
-Image: jellyfish1.jpg
-Image: jellyfish2.jpg
 Content:
-Space is vast and full of mysteries. From black holes to distant galaxies, there is so much to explore.
+Image: jellyfish1.jpg
+Text: Space is vast and full of mysteries.
+Image: jellyfish2.jpg
+Text: From black holes to distant galaxies, there is so much to explore.

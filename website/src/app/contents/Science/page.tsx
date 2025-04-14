@@ -3,7 +3,7 @@ import SciencePageTemplate from "./SciencePageTemplate";
 export const Science = () => {
   return (
     <SciencePageTemplate
-      dirPath={"public/science/article0"}
+      dirPath={"/science/article0/"}
     />
   )
 }
