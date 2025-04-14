@@ -3,6 +3,8 @@ Title: Article Title
 Chapter: Capter0
 Image: jellyfish1.jpg jellyfish2.jpg
 Text: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 Chapter: Capter1
 Text: They allow developers to render components on the server, reducing client-side JavaScript.

@@ -1,10 +1,9 @@
-import fs from "fs";
-import path from "path";
 import Image from "next/image";
 import style from "@/app/style/article.module.css"
 import Chapter from "./Chapter";
 import MainText from "./MainText";
 import { ArticleContentsType } from "@/types/ArticleContentsStatus";
+import { useFetchArticleData } from "@/hooks/useFetchArticleData";
 
 interface SciencePageTemplateProps {
   dirPath: string;
@@ -12,18 +11,8 @@ interface SciencePageTemplateProps {
 
 export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
   const { dirPath } = props
-  // 記事データを読み込む
-  const filePath = path.join(process.cwd(), "public", dirPath, "article.txt");
-  const fileContent = fs.readFileSync(filePath, "utf-8");
 
-  // 記事データを解析
-  const lines = fileContent.split("\n");
-  const title = lines.find((line) => line.startsWith("Title:"))?.replace("Title:", "").trim();
-  const contentIndex = lines.findIndex(
-    (line) => line.startsWith("Image:") || line.startsWith("Text:") || line.startsWith("Chapter:")
-  )
-  const contentLines = lines.slice(contentIndex);
-
+  const { title, contentLines } = useFetchArticleData(dirPath)
   return (
     <div className="p-8">
       <h1 className={style.articleTitle}>{title}</h1>
