@@ -1,6 +1,8 @@
+import SciencePageTemplate from "./SciencePageTemplate";
+
 export const Science = () => {
   return (
-    <h1>Science</h1>
+    <SciencePageTemplate />
   )
 }
 export default Science;
