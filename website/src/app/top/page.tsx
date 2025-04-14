@@ -8,7 +8,7 @@ import HeroImage from "./HeroImage";
 
 const Top = async () => {
   // text.txtのパスを取得
-  const filePath = path.join(process.cwd(), "text.txt");
+  const filePath = path.join(process.cwd(), "public", "top", "text.txt");
   const fileContents = fs.readFileSync(filePath, "utf8");
 
   return (
@@ -23,7 +23,6 @@ const Top = async () => {
           </h2>
         </div>
       </div>
-
       <div className="mt-8 p-4 border rounded">
         <h2 className="text-xl font-semibold">File Content:</h2>
         <pre className="mt-2 whitespace-pre-wrap">{fileContents}</pre>

@@ -7,14 +7,13 @@ export const Header = () => {
   return (
     <header className={style.header}>
       <nav className={style.nav}>
-        <h1 className={style.title}>FROG</h1>
+        <Link href="/top" className={style.title}>
+          FROG
+        </Link>
         <div>
           <Contents />
         </div>
         <div className={style.links}>
-          <Link href="/top" className={style.link}>
-            Top
-          </Link>
           <Link href="/event" className={style.link}>
             Event
           </Link>
