@@ -1,17 +1,29 @@
-import Image from "next/image";
+"use client";
+
 import React from "react"
-import style from "@/app/style/top.module.css"
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import "@splidejs/splide/css";
 
 export const HeroImage = () => {
 
   return (
-    <Image
-      src={"globe.svg"}
-      alt="background"
-      width={100}
-      height={100}
-      className={style.heroImage}
-    />
+    <Splide
+      options={{
+        rewind: true,
+        gap: '1rem',
+      }}
+      aria-label="お気に入りの写真"
+    >
+      <SplideSlide>
+        <img src="globe.svg" alt="Image 1" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src="window.svg" alt="Image 2" />
+      </SplideSlide>
+      <SplideSlide>
+        <img src="file.svg" alt="Image 3" />
+      </SplideSlide>
+    </Splide>
   )
 }
 
