@@ -2,7 +2,6 @@ import Image from "next/image";
 import style from "@/app/style/article.module.css"
 import Chapter from "./Chapter";
 import MainText from "./MainText";
-import { ArticleContentsType } from "@/types/ArticleContentsStatus";
 import { useFetchArticleData } from "@/hooks/useFetchArticleData";
 
 interface SciencePageTemplateProps {
@@ -13,23 +12,21 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
   const { dirPath } = props
 
   const { title, contentLines } = useFetchArticleData(dirPath)
-
   console.log(contentLines)
   return (
     <div className="p-8">
       <h1 className={style.articleTitle}>{title}</h1>
       <div>
         {contentLines.map((line, index) => {
-          const content = FetchContents(line)
-          if (content === null) return null
+          if (line === null) return null
 
-          switch (content.contentsType) {
+          switch (line.contentsType) {
             case "Title":
               break;
             case "Image":
               return (
                 <div key={index} className={style.articleImageBox}>
-                  {content.content.split(" ").map((path, jindex) => (
+                  {line.content.split(" ").map((path, jindex) => (
                     <Image
                       key={jindex}
                       src={`${dirPath}/${path}`}
@@ -43,25 +40,17 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
               )
             case "Chapter":
               return (
-                <Chapter key={index} chapterName={content.content} />
+                <Chapter key={index} chapterName={line.content} />
               )
             case "Text":
               return (
-                <MainText key={index} text={content.content} />
+                <MainText key={index} text={line.content} />
               )
           }
         })}
       </div>
     </div>
   );
-}
-
-const FetchContents = (line: string): { contentsType: ArticleContentsType, content: string } | null => {
-  if (line.startsWith("Title:")) return { contentsType: "Title", content: line.replace("Image:", "").trim() };
-  if (line.startsWith("Text:")) return { contentsType: "Text", content: line.replace("Text:", "").trim() }
-  if (line.startsWith("Chapter:")) return { contentsType: "Chapter", content: line.replace("Chapter:", "").trim() }
-  if (line.startsWith("Image:")) return { contentsType: "Image", content: line.replace("Image:", "").trim() }
-  return null
 }
 
 export default SciencePageTemplate;
