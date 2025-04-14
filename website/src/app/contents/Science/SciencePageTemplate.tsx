@@ -12,10 +12,33 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
   const { dirPath } = props
 
   const { title, contentLines } = useFetchArticleData(dirPath)
-  console.log(contentLines)
+
+  const ArticleIndex = contentLines
+    .filter((line) => line.contentsType === "Chapter")
+    .map((line, index) => ({
+      id: `chapter-${index}`, // ユニークなIDを生成
+      name: line.content,
+    }));
+
+
   return (
     <div className="p-8">
       <h1 className={style.articleTitle}>{title}</h1>
+
+      {/* 目次 */}
+      <nav className={style.tableOfContents}>
+        <h2>Index</h2>
+        <ul>
+          {ArticleIndex.map((chapter) => (
+            <li key={chapter.id}>
+              <a href={`#${chapter.id}`} className={style.tocLink}>
+                {chapter.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
       <div>
         {contentLines.map((line, index) => {
           if (line === null) return null
@@ -40,7 +63,9 @@ export const SciencePageTemplate = (props: SciencePageTemplateProps) => {
               )
             case "Chapter":
               return (
-                <Chapter key={index} chapterName={line.content} />
+                <div key={index} id={`chapter-${ArticleIndex.findIndex((c) => c.name === line.content)}`}>
+                  <Chapter chapterName={line.content} />
+                </div>
               )
             case "Text":
               return (
