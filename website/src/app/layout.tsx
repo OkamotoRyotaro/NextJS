@@ -29,9 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header />
       <body className="flex flex-col min-h-screen">
         {/* 固定ヘッダー */}
+        <Header />
         {/* ページごとのコンテンツ */}
         <main className="flex-grow mt-20">{children}</main>
         <Footer />
