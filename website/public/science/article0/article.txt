@@ -1,6 +1,10 @@
-Title: The Wonders of Space
-Content:
+Title: Article Title
+
+Chapter: Capter0
 Image: jellyfish1.jpg
-Text: Space is vast and full of mysteries.
+Text: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Chapter: Capter1
+Text: They allow developers to render components on the server, reducing client-side JavaScript.
 Image: jellyfish2.jpg
-Text: From black holes to distant galaxies, there is so much to explore.
+Text: They allow developers to render components on the server, reducing client-side JavaScript.

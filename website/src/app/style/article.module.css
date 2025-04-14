@@ -1,0 +1,24 @@
+.articleTitle {
+  font-size: 40;
+  text-align: center;
+  font-weight: bold;
+}
+
+.articleChapter {
+  margin-top: 5%;
+  font-size: 30;
+  margin-bottom: 1%;
+}
+
+.articleImage {
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: 40vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.articleText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
