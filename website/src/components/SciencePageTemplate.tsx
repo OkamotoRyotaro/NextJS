@@ -1,7 +1,7 @@
 import Image from "next/image";
 import style from "@/app/style/article.module.css"
-import Chapter from "../app/contents/Science/Chapter";
-import MainText from "../app/contents/Science/MainText";
+import Chapter from "./Chapter";
+import MainText from "./MainText";
 import { useFetchArticleData } from "@/hooks/useFetchArticleData";
 
 interface SciencePageTemplateProps {
