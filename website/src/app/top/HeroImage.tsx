@@ -25,13 +25,13 @@ export const HeroImage = () => {
       aria-label="お気に入りの写真"
     >
       <SplideSlide>
-        <img src="globe.svg" alt="Image 1" />
+        <img src="/globe.svg" alt="Image 1" />
       </SplideSlide>
       <SplideSlide>
-        <img src="window.svg" alt="Image 2" />
+        <img src="/window.svg" alt="Image 2" />
       </SplideSlide>
       <SplideSlide>
-        <img src="file.svg" alt="Image 3" />
+        <img src="/file.svg" alt="Image 3" />
       </SplideSlide>
     </Splide>
   )
