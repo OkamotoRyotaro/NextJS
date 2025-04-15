@@ -1,7 +1,6 @@
 import path from "path";
 import fs from "fs";
-import SciencePageTemplate from "../../../components/SciencePageTemplate";
-import Link from "next/link";
+import { Card } from "@/components/Card";
 
 export const Science = () => {
   const filePath = path.join(process.cwd(), "public", "science");
@@ -15,7 +14,13 @@ export const Science = () => {
   }))
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {/* <nav>
         <h2>Index</h2>
         <ul>
@@ -26,7 +31,7 @@ export const Science = () => {
           ))}
         </ul>
       </nav> */}
-      {ArticleList.map((article, index) => (
+      {/* {ArticleList.map((article, index) => (
         <div
           key={index}
           id={`article-${ArticleList.findIndex((elem) => elem.title === article.title)}`}
@@ -35,8 +40,29 @@ export const Science = () => {
             dirPath={"/science/article0"}
           />
         </div>
-      ))}
-    </>
+      ))} */}
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+      <Card date="date0" link="" title="title0" />
+      <Card date="date1" link="" title="title1" />
+      <Card date="date2" link="" title="title2" />
+    </div>
   )
 }
 export default Science;
