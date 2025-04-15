@@ -1,5 +1,5 @@
 import { fetchMenbers } from "@/hooks/useFetchMenbers";
-import ProfileTemplate from "./ProfileTemplate";
+import ProfileTemplate from "../../components/ProfileTemplate";
 
 const About = async () => {
 

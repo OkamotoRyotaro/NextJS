@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs";
-import SciencePageTemplate from "./SciencePageTemplate";
+import SciencePageTemplate from "../../../components/SciencePageTemplate";
 import Link from "next/link";
 
 export const Science = () => {
