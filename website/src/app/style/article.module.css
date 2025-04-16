@@ -19,7 +19,6 @@
   border-radius: 8px;
   margin-bottom: 16px;
   width: 40vh;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .articleImageBox {
@@ -27,6 +26,16 @@
   display: flex;
   gap: 1%;
   max-width: 100vh;
+}
+
+@media (max-width: 768px) {
+  .articleImageBox {
+    flex-wrap: wrap;
+  }
+
+  .articleImage {
+    width: auto;
+  }
 }
 
 .articleText {
