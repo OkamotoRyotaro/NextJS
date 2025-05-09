@@ -10,11 +10,8 @@ export const Science = () => {
   const ArticleList = dirList.map((dir, index) => ({
     id: `article-${index}`,
     title: dir,
-    link: "/contents/Science/" + dir
+    link: `/science/${dir}/${dir}.html`
   }))
-
-  console.log(filePath, ArticleList)
-
   return (
     <div
       style={{

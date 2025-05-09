@@ -9,6 +9,7 @@ interface CardProps {
 }
 
 export const Card = (props: CardProps) => {
+  console.log("LINK : ", props.link)
   return (
     <div className={style.outline}>
       <p>{props.date}</p>
